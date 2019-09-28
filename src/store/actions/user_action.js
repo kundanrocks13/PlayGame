@@ -54,7 +54,7 @@ export function signIn(payload) {
 }
 
 export function refreshToken(payload) {
-    console.log('refresh token value ===== ',payload)
+    console.log('refresh token values ===== ',payload)
     const refreshTokenRes = axios({
         method: 'POST',
         url: REFRESH_TOKEN,
@@ -62,7 +62,7 @@ export function refreshToken(payload) {
             grant_type: 'refresh_token',
             refresh_token: payload
         },
-        // data: 'grant_type=refresh_token&refresh_token='+ payload,
+        // data: 'grant_type=refresh_token&refresh_token='+ payload ,
         
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
