@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View, Button, ActivityIndicator, StyleSheet } from 'react-native'
 import AuthLogo from './authLogo'
 import AuthLogin from './authLogin'
-import {getTokens} from '../../utils/constant'
+import {getTokens} from '../../components/constant'
 
 import { connect } from 'react-redux'
 import AsyncStorage from '@react-native-community/async-storage'

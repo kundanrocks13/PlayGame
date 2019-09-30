@@ -7,14 +7,26 @@ import {
     createAppContainer
  } from 'react-navigation'
 
- import Auth from './components/auth'
- import Games from './components/games'
- import News from './components/news'
- import AuthLogin from './components/auth'
+ import Auth from './screens/auth'
+ import Games from './screens/games'
+ import News from './screens/news'
+ import AuthLogin from './screens/auth'
+import NewsArticles from './screens/news/newsArticles'
+import GamesArticles from './screens/games/gamesArticles'
+
+const NewsStack = createStackNavigator ({
+    News : News,
+    NewsArticles : NewsArticles
+})
+
+const GamesStack = createStackNavigator ({
+    Games : Games,
+    GamesArticles : GamesArticles
+})
 
  const AppStack = createBottomTabNavigator ({
-     News : News,
-     Games : Games
+     News : NewsStack,
+     Games : GamesStack
  })
 
  const AuthStack = createStackNavigator ({

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { SIGN_IN, SIGN_UP, REFRESH_TOKEN } from '../../utils/constant'
+import { SIGN_IN, SIGN_UP, REFRESH_TOKEN } from '../../components/constant'
 // import { SIGN_IN, SIGN_UP } from '../type'
 
 export function signUp(payload) {
@@ -18,7 +18,7 @@ export function signUp(payload) {
         // console.log('sign up response ===== ', response.data.email)
         return response.data
     }).catch(error=>{
-        console.warn(error)
+        console.log(error)
     })
 
     return {
@@ -41,10 +41,9 @@ export function signIn(payload) {
             "Content-Type" : "application/json"
         }
     }).then(response=>{
-        // console.warn('sign in response ==== ', response)
         return response.data
     }).catch(error=>{
-        console.warn(error)
+        console.log(error)
     })
 
     return {

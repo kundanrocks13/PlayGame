@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text, Button, Alert } from 'react-native'
 import { Field, reduxForm } from 'redux-form'
-import TextInput from '../../utils/form/input'
-import ValidationForm from '../../utils/form/validationForm'
+import TextInput from '../../components/form/input'
+import ValidationForm from '../../components/form/validationForm'
 import { connect }  from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { signUp, signIn } from '../../store/actions/user_action'
-import {setTokens} from '../../utils/constant'
+import {setTokens} from '../../components/constant'
 
 class AuthLogin extends React.Component {
     
@@ -123,7 +123,6 @@ class AuthLogin extends React.Component {
     }
 
     submitForm = () => {
-        // console.warn('submit called ---- ')
         let isFormValid = true
         let submitFormObject = {}
 
@@ -237,7 +236,6 @@ class AuthLogin extends React.Component {
 }
 
 function mapStateToProps(state) {
-    console.warn('map state to props --1-- ', JSON.stringify(state))
     return {
         userInfo: state.User
     }
